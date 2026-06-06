@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRMEF EPS Pro FORMATION — Fiche d'inscription CRMEF 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue-dark:#0b2545;--blue-mid:#1A5276;--blue-light:#2E86C1;--gold:#D4AC0D;--gold-light:#F9E79F;--bg:#f0f4f8;--white:#ffffff;--text:#1a202c;--text-muted:#64748b;--border:#e2e8f0;--success:#16a34a;--success-bg:#dcfce7;--radius:12px;--radius-sm:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+.hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-mid) 60%,var(--blue-light) 100%);padding:44px 20px 64px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:rgba(212,172,13,0.1);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;background:rgba(255,255,255,0.04);border-radius:50%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,172,13,0.2);border:1px solid rgba(212,172,13,0.4);color:var(--gold-light);font-size:12px;font-weight:600;padding:5px 16px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:8px;position:relative;z-index:1}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1rem;color:rgba(255,255,255,0.72);position:relative;z-index:1}
+
+.container{max-width:700px;margin:-32px auto 40px;padding:0 16px}
+
+.card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:24px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.card-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.card-icon{width:40px;height:40px;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.card-title{font-size:16px;font-weight:700;color:var(--blue-dark)}
+.card-sub{font-size:12px;color:var(--text-muted);margin-top:1px}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:540px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select{padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);transition:border .2s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(26,82,118,.08)}
+
+.test-section-label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--blue-mid);background:#EBF5FB;padding:9px 14px;border-radius:var(--radius-sm);margin:20px 0 12px;border-left:3px solid var(--blue-mid)}
+
+.tests-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:540px){.tests-grid{grid-template-columns:1fr}}
+
+.test-card{border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fafbfc;transition:border .2s}
+.test-card:hover{border-color:var(--blue-light)}
+.test-icon-block{width:100%;height:90px;display:flex;align-items:center;justify-content:center;font-size:44px;background:linear-gradient(135deg,#EBF5FB,#D6EAF8)}
+.test-body{padding:12px}
+.test-badge{display:inline-block;background:var(--blue-dark);color:#fff;font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;margin-bottom:6px;letter-spacing:.5px}
+.test-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.35}
+.test-input{width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:13px;font-family:'Outfit',sans-serif;color:var(--text);background:var(--white)}
+.test-input:focus{outline:none;border-color:var(--blue-mid)}
+.test-unit{font-size:11px;color:var(--text-muted);margin-top:4px}
+
+.test-card-wide{border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fafbfc;display:grid;grid-template-columns:100px 1fr;transition:border .2s}
+@media(max-width:440px){.test-card-wide{grid-template-columns:1fr}}
+.test-card-wide:hover{border-color:var(--blue-light)}
+.test-icon-side{display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#EBF5FB,#D6EAF8);min-height:90px}
+@media(max-width:440px){.test-icon-side{height:70px}}
+
+.btn-submit{width:100%;padding:15px;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;border:none;border-radius:var(--radius);font-size:16px;font-weight:700;font-family:'Outfit',sans-serif;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px;transition:opacity .2s;letter-spacing:.3px}
+.btn-submit:hover{opacity:.88}
+.success-banner{background:var(--success-bg);border:1.5px solid var(--success);color:var(--success);padding:16px 20px;border-radius:var(--radius);text-align:center;font-size:14px;font-weight:600;display:none;margin-top:12px;line-height:1.5}
+.note{font-size:12px;color:var(--text-muted);text-align:center;margin-top:10px}
+footer{text-align:center;padding:24px;font-size:12px;color:var(--text-muted)}
+footer strong{color:var(--blue-mid)}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">🏃 CRMEF-EPS 2026</div>
+  <h1>CRMEF EPS Pro FORMATION <span>· Fès</span></h1>
+  <p>Fiche d'inscription et de bilan initial — Programme d'entraînement individualisé</p>
+</div>
+
+<div class="container">
+
+  <!-- INFOS PERSONNELLES -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">👤</div>
+      <div><div class="card-title">Informations personnelles</div><div class="card-sub">Données d'identification du candidat</div></div>
+    </div>
+    <div class="form-grid">
+      <div class="form-group"><label>Prénom et nom</label><input id="f-nom" type="text" placeholder="Ex : Youssef Alami"></div>
+      <div class="form-group"><label>Téléphone WhatsApp</label><input id="f-tel" type="tel" placeholder="06XXXXXXXX"></div>
+      <div class="form-group"><label>Âge</label><input id="f-age" type="number" placeholder="Ex : 24" min="18" max="45"></div>
+      <div class="form-group"><label>Ville de résidence</label><input id="f-ville" type="text" placeholder="Ex : Fès, Meknès..."></div>
+      <div class="form-group full"><label>Pratique sportive actuelle</label>
+        <select id="f-sport">
+          <option value="">-- Sélectionner --</option>
+          <option>Aucune pratique régulière</option>
+          <option>1 à 2 séances par semaine</option>
+          <option>3 à 4 séances par semaine</option>
+          <option>5 séances ou plus par semaine</option>
+        </select>
+      </div>
+      <div class="form-group full"><label>Discipline(s) pratiquée(s)</label><input id="f-discipline" type="text" placeholder="Ex : football, athlétisme, natation..."></div>
+      <div class="form-group"><label>Accès à un terrain</label>
+        <select id="f-terrain">
+          <option value="">-- Sélectionner --</option>
+          <option>Terrain d'athlétisme</option>
+          <option>Stade de football</option>
+          <option>Piste de quartier</option>
+          <option>Espace extérieur libre</option>
+          <option>Salle de sport</option>
+          <option>Aucun accès à un terrain</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Disponibilités hebdomadaires</label>
+        <select id="f-dispo">
+          <option value="">-- Sélectionner --</option>
+          <option>1 à 2 jours/semaine</option>
+          <option>3 à 4 jours/semaine</option>
+          <option>5 jours/semaine ou plus</option>
+        </select>
+      </div>
+      <div class="form-group full"><label>Blessures ou contre-indications médicales</label>
+        <input id="f-blessure" type="text" placeholder="Ex : genou droit, aucune...">
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTS -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">⏱️</div>
+      <div><div class="card-title">Batterie de tests initiaux</div><div class="card-sub">Effectuez chaque test et filmez votre réalisation pour validation</div></div>
+    </div>
+
+    <div class="test-section-label">❤️ Endurance aérobie</div>
+    <div class="test-card-wide">
+      <div class="test-icon-side">🏃</div>
+      <div class="test-body">
+        <span class="test-badge">TEST 1</span>
+        <div class="test-name">Test de Cooper — Course 12 minutes</div>
+        <input class="test-input" id="t-cooper" type="number" placeholder="Distance parcourue en mètres" min="0" max="5000">
+        <div class="test-unit">Résultat en mètres · Ex : 2 200 m · Sur terrain plat</div>
+      </div>
+    </div>
+
+    <div class="test-section-label">💪 Force musculaire</div>
+    <div class="tests-grid">
+      <div class="test-card">
+        <div class="test-icon-block">🤜</div>
+        <div class="test-body">
+          <span class="test-badge">TEST 2</span>
+          <div class="test-name">Pompes en 30 secondes</div>
+          <input class="test-input" id="t-pompes" type="number" placeholder="Nb de répétitions" min="0" max="100">
+          <div class="test-unit">Force membres supérieurs · Ex : 20</div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-icon-block">🔥</div>
+        <div class="test-body">
+          <span class="test-badge">TEST 3</span>
+          <div class="test-name">Abdominaux en 30 secondes</div>
+          <input class="test-input" id="t-abdo" type="number" placeholder="Nb de répétitions" min="0" max="100">
+          <div class="test-unit">Force abdominale · Ex : 25</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-section-label">⚡ Puissance membres inférieurs</div>
+    <div class="tests-grid">
+      <div class="test-card">
+        <div class="test-icon-block">⬆️</div>
+        <div class="test-body">
+          <span class="test-badge">TEST 4</span>
+          <div class="test-name">Détente verticale sans élan</div>
+          <input class="test-input" id="t-detente-v" type="number" placeholder="Hauteur en cm" min="0" max="100">
+          <div class="test-unit">Puissance explosive · Ex : 45 cm</div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-icon-block">➡️</div>
+        <div class="test-body">
+          <span class="test-badge">TEST 5</span>
+          <div class="test-name">Détente horizontale sans élan</div>
+          <input class="test-input" id="t-detente-h" type="number" placeholder="Distance en cm" min="0" max="300">
+          <div class="test-unit">Distance sautée · Ex : 180 cm</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-section-label">🧱 Endurance posturale</div>
+    <div class="test-card-wide">
+      <div class="test-icon-side">🛡️</div>
+      <div class="test-body">
+        <span class="test-badge">TEST 6</span>
+        <div class="test-name">Gainage frontal — Planche</div>
+        <input class="test-input" id="t-gainage" type="number" placeholder="Durée tenue en secondes" min="0" max="600">
+        <div class="test-unit">Endurance posturale · Ex : 60 secondes</div>
+      </div>
+    </div>
+
+    <div class="test-section-label">🤸 Souplesse</div>
+    <div class="tests-grid">
+      <div class="test-card">
+        <div class="test-icon-block">🦵</div>
+        <div class="test-body">
+          <span class="test-badge">TEST 7</span>
+          <div class="test-name">Souplesse segments inférieurs — Grand écart</div>
+          <input class="test-input" id="t-souplesse-j" type="number" placeholder="Écart en cm" min="0" max="200">
+          <div class="test-unit">Grand écart frontal · Ex : 120 cm</div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-icon-block">🌉</div>
+        <div class="test-body">
+          <span class="test-badge">TEST 8</span>
+          <div class="test-name">Souplesse du dos — Pont</div>
+          <input class="test-input" id="t-souplesse-d" type="number" placeholder="Hauteur dos en cm" min="0" max="100">
+          <div class="test-unit">Hauteur dos / sol · Ex : 40 cm</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-section-label">🏅 Éléments gymniques</div>
+    <div class="test-card-wide">
+      <div class="test-icon-side">🤸</div>
+      <div class="test-body">
+        <span class="test-badge">TEST 9</span>
+        <div class="test-name">Réalisation des éléments gymniques de base</div>
+        <select class="test-input" id="t-gym">
+          <option value="">-- Niveau actuel --</option>
+          <option>Aucun élément maîtrisé</option>
+          <option>Éléments simples (roulade avant/arrière, ATR)</option>
+          <option>Éléments intermédiaires (roue, appui renversé)</option>
+          <option>Éléments avancés maîtrisés (salto, flip...)</option>
+        </select>
+        <div class="test-unit">Vidéo de réalisation requise pour validation</div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="btn-submit" onclick="submitForm()">✅ Envoyer ma fiche d'inscription</button>
+  <div class="success-banner" id="success-banner">
+    🎉 Fiche envoyée avec succès !<br>Le formateur analysera votre profil et vous contactera sur WhatsApp sous 24h.
+  </div>
+  <p class="note">🔒 Vos données sont confidentielles et utilisées uniquement dans le cadre du programme CRMEF EPS Pro FORMATION.</p>
+</div>
+
+<footer>
+  <strong>CRMEF EPS Pro FORMATION · Fès</strong> — Programme hybride CRMEF-EPS 2026<br>
+  Préparation physique · Écrits · Oral · 2 400 MAD
+</footer>
+
+<script>
+function submitForm() {
+  const nom = document.getElementById('f-nom').value.trim();
+  const tel = document.getElementById('f-tel').value.trim();
+  if (!nom || !tel) { alert('Veuillez renseigner au minimum votre nom et votre numéro WhatsApp.'); return; }
+  const get = id => document.getElementById(id).value;
+  const msg =
+    '📋 *Nouvelle inscription CRMEF EPS Pro FORMATION*\n\n' +
+    '👤 *Candidat :* ' + nom + '\n' +
+    '📞 *Tél :* ' + tel + '\n' +
+    '🏙️ *Ville :* ' + (get('f-ville')||'—') + ' · ' + (get('f-age')||'—') + ' ans\n' +
+    '🏃 *Sport :* ' + (get('f-sport')||'—') + '\n' +
+    '📅 *Disponibilités :* ' + (get('f-dispo')||'—') + '\n' +
+    '🏟️ *Terrain :* ' + (get('f-terrain')||'—') + '\n' +
+    '🩹 *Blessures :* ' + (get('f-blessure')||'—') + '\n\n' +
+    '*🔬 Tests initiaux :*\n' +
+    '• Cooper : ' + (get('t-cooper') ? get('t-cooper')+' m' : '—') + '\n' +
+    '• Pompes : ' + (get('t-pompes')||'—') + ' rép.\n' +
+    '• Abdos : ' + (get('t-abdo')||'—') + ' rép.\n' +
+    '• Détente V : ' + (get('t-detente-v') ? get('t-detente-v')+' cm' : '—') + '\n' +
+    '• Détente H : ' + (get('t-detente-h') ? get('t-detente-h')+' cm' : '—') + '\n' +
+    '• Gainage : ' + (get('t-gainage') ? get('t-gainage')+' s' : '—') + '\n' +
+    '• Souplesse jambes : ' + (get('t-souplesse-j') ? get('t-souplesse-j')+' cm' : '—') + '\n' +
+    '• Souplesse dos : ' + (get('t-souplesse-d') ? get('t-souplesse-d')+' cm' : '—') + '\n' +
+    '• Gym : ' + (get('t-gym')||'—') + '\n\n' +
+    '📆 Inscrit le ' + new Date().toLocaleDateString('fr-FR');
+
+  const phone = '212700024478'; // ← REMPLACE PAR TON NUMÉRO
+  window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(msg), '_blank');
+  document.getElementById('success-banner').style.display = 'block';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>
